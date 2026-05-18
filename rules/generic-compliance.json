@@ -1,0 +1,20 @@
+[
+  {
+    "tool": "Compliance Check",
+    "target": "all servers",
+    "id": "CIS-1.1.1",
+    "severity": "HIGH",
+    "title": "Filesystem integrity checking is not enabled",
+    "description": "Install AIDE or Tripwire and schedule regular integrity checks.",
+    "line": null
+  },
+  {
+    "tool": "Compliance Check",
+    "target": "all servers",
+    "id": "CIS-4.1.1",
+    "severity": "MEDIUM",
+    "title": "Auditd is not installed or not running",
+    "description": "Enable auditd to capture system events for security monitoring.",
+    "line": null
+  }
+]
