@@ -1,0 +1,47 @@
+[
+  {
+    "tool": "Semgrep",
+    "target": "src/api/v1/users.py",
+    "id": "python.lang.security.audit.os-command-injection",
+    "severity": "ERROR",
+    "title": "OS command injection",
+    "description": "User input is passed to os.system() without sanitisation. Use subprocess.run with list arguments instead.",
+    "line": 42
+  },
+  {
+    "tool": "Semgrep",
+    "target": "src/db/query.py",
+    "id": "python.lang.security.audit.sql-injection",
+    "severity": "ERROR",
+    "title": "SQL injection via string formatting",
+    "description": "Use parameterised queries (e.g., ? placeholder) instead of building SQL with f-strings.",
+    "line": 57
+  },
+  {
+    "tool": "Semgrep",
+    "target": "src/views/login.py",
+    "id": "python.lang.security.audit.xss.avoid-jinja2-autoescape-off",
+    "severity": "WARNING",
+    "title": "Jinja2 autoescape is disabled",
+    "description": "Autoescape is set to False for this template, which can lead to XSS. Remove the `autoescape` parameter.",
+    "line": 15
+  },
+  {
+    "tool": "Semgrep",
+    "target": "src/config/settings.py",
+    "id": "python.lang.security.audit.hardcoded-credentials",
+    "severity": "ERROR",
+    "title": "Hardcoded database password",
+    "description": "The database password is hardcoded. Use environment variables or a secrets manager.",
+    "line": 8
+  },
+  {
+    "tool": "Semgrep",
+    "target": "src/utils/helpers.py",
+    "id": "python.lang.security.audit.eval.use-of-eval",
+    "severity": "ERROR",
+    "title": "Use of eval() with user input",
+    "description": "eval() executes arbitrary Python code. Replace with a safe parser like `ast.literal_eval`.",
+    "line": 120
+  }
+]
