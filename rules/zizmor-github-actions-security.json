@@ -1,0 +1,47 @@
+[
+  {
+    "tool": "Zizmor",
+    "target": ".github/workflows/deploy.yml",
+    "id": "zizmor/template-injection",
+    "severity": "HIGH",
+    "title": "Template injection in run block",
+    "description": "Avoid expanding user-controlled variables directly in `run:` blocks. Use environment variables instead.",
+    "line": 23
+  },
+  {
+    "tool": "Zizmor",
+    "target": ".github/workflows/release.yml",
+    "id": "zizmor/unpinned-action",
+    "severity": "MEDIUM",
+    "title": "Action used without commit SHA",
+    "description": "The `actions/checkout@v4` action is not pinned to a full commit SHA. Pin to a specific revision to prevent supply chain attacks.",
+    "line": 8
+  },
+  {
+    "tool": "Zizmor",
+    "target": ".github/workflows/build.yml",
+    "id": "zizmor/secrets-in-args",
+    "severity": "CRITICAL",
+    "title": "Secret passed as command-line argument",
+    "description": "A secret is passed directly to a script argument, which may be visible in process listings. Use environment variables.",
+    "line": 15
+  },
+  {
+    "tool": "Zizmor",
+    "target": ".github/workflows/cd.yml",
+    "id": "zizmor/workflow-run-id-injection",
+    "severity": "HIGH",
+    "title": "Workflow run ID used in artifact name",
+    "description": "Using the run ID without sanitisation can lead to path traversal attacks. Use a safe slug generator.",
+    "line": 30
+  },
+  {
+    "tool": "Zizmor",
+    "target": ".github/workflows/nightly.yml",
+    "id": "zizmor/self-hosted-runner-no-hardening",
+    "severity": "MEDIUM",
+    "title": "Self-hosted runner without security hardening",
+    "description": "A self-hosted runner is used but no `securityContext` or `runAs` configured. Enable strict isolation.",
+    "line": 3
+  }
+]
