@@ -1,0 +1,47 @@
+[
+  {
+    "tool": "Poutine",
+    "target": ".gitlab-ci.yml",
+    "id": "poutine/untrusted-action",
+    "severity": "HIGH",
+    "title": "Action not pinned to SHA",
+    "description": "Using `trivy-action@v1` exposes you to tag hijacking attacks. Pin to a full commit SHA.",
+    "line": 12
+  },
+  {
+    "tool": "Poutine",
+    "target": ".gitlab-ci.yml",
+    "id": "poutine/shared-runner-misuse",
+    "severity": "MEDIUM",
+    "title": "Untrusted shared runner",
+    "description": "The pipeline uses the default shared runner, which may expose build artifacts to other tenants. Consider using a dedicated runner.",
+    "line": 1
+  },
+  {
+    "tool": "Poutine",
+    "target": ".gitlab-ci.yml",
+    "id": "poutine/image-from-untrusted-registry",
+    "severity": "HIGH",
+    "title": "Image pulled from untrusted registry",
+    "description": "The image `mycustom-registry.com/base:latest` is not from a trusted source. Use an internal mirror or pin to a specific digest.",
+    "line": 5
+  },
+  {
+    "tool": "Poutine",
+    "target": ".gitlab-ci.yml",
+    "id": "poutine/secret-in-log",
+    "severity": "CRITICAL",
+    "title": "Secret printed in build log",
+    "description": "A command echoes an environment variable that contains a secret. This will leak credentials to the log.",
+    "line": 18
+  },
+  {
+    "tool": "Poutine",
+    "target": ".gitlab-ci.yml",
+    "id": "poutine/insecure-artifact-upload",
+    "severity": "MEDIUM",
+    "title": "Artifact uploaded without expiration",
+    "description": "Build artifacts are kept forever, increasing the risk of data leakage. Set an `expire_in` value.",
+    "line": 22
+  }
+]
