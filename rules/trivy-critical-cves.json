@@ -1,0 +1,57 @@
+[
+  {
+    "tool": "Trivy",
+    "target": "library/nginx:1.25",
+    "id": "CVE-2026-33634",
+    "severity": "CRITICAL",
+    "title": "Trivy supply chain compromise (TeamPCP)",
+    "description": "A malicious Trivy release was published, force-pushing 76 tags to steal credentials. Upgrade to 0.70.0 or later.",
+    "package": "trivy",
+    "installed_version": "0.69.4",
+    "fixed_version": "0.70.0"
+  },
+  {
+    "tool": "Trivy",
+    "target": "alpine:3.18",
+    "id": "CVE-2024-1234",
+    "severity": "CRITICAL",
+    "title": "Remote code execution in OpenSSL",
+    "description": "OpenSSL < 3.2.0 contains a heap buffer overflow. Upgrade to 3.2.0 immediately.",
+    "package": "openssl",
+    "installed_version": "3.1.2",
+    "fixed_version": "3.2.0"
+  },
+  {
+    "tool": "Trivy",
+    "target": "node:16",
+    "id": "CVE-2023-4567",
+    "severity": "HIGH",
+    "title": "Prototype pollution in lodash",
+    "description": "lodash < 4.17.21 allows prototype pollution via the defaultsDeep function.",
+    "package": "lodash",
+    "installed_version": "4.17.20",
+    "fixed_version": "4.17.21"
+  },
+  {
+    "tool": "Trivy",
+    "target": "python:3.11-slim",
+    "id": "CVE-2025-7890",
+    "severity": "HIGH",
+    "title": "XML External Entity (XXE) in requests library",
+    "description": "requests < 2.32.0 is vulnerable to XXE attacks when parsing XML responses.",
+    "package": "requests",
+    "installed_version": "2.31.0",
+    "fixed_version": "2.32.0"
+  },
+  {
+    "tool": "Trivy",
+    "target": "ubuntu:22.04",
+    "id": "CVE-2026-1111",
+    "severity": "MEDIUM",
+    "title": "Denial of Service in zlib",
+    "description": "zlib < 1.3.1 allows denial of service through crafted compressed data.",
+    "package": "zlib",
+    "installed_version": "1.2.11",
+    "fixed_version": "1.3.1"
+  }
+]
